@@ -12,6 +12,8 @@ import { UsuarioPedidosPendentesComponent } from './usuario/pedidos-pendentes/us
 import { UsuarioPedidosFinalizadosComponent } from './usuario/pedidos-finalizados/usuario-pedidos-finalizados.component';
 import { LoginComponent } from './login/login.component';
 import { EntrarComponent } from './entrar/entrar.component';
+import { FormsModule } from '@angular/forms';
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,10 @@ import { EntrarComponent } from './entrar/entrar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

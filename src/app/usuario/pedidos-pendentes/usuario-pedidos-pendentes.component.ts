@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Pedidos } from 'src/app/models/pedidos.model';
+import { PedidosService } from 'src/app/service/pedidos.service';
 
 @Component({
   selector: 'app-usuario-pedidos-pendentes',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuarioPedidosPendentesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: PedidosService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.service.todas().subscribe((pedidos: Pedidos[]) => {
+      console.log(pedidos);
+    })
   }
 
 }
