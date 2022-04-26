@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Pedidos } from 'src/app/models/pedidos.model';
-import { PedidosService } from 'src/app/service/pedidos.service';
+import { UpedidosPendentes } from 'src/app/models/usuario/UpedidosPendentes';
+import { UpedidosPendentesService } from 'src/app/service/usuario/UpedidosPendentes.service';
+
 
 @Component({
   selector: 'app-usuario-pedidos-pendentes',
@@ -9,11 +10,13 @@ import { PedidosService } from 'src/app/service/pedidos.service';
 })
 export class UsuarioPedidosPendentesComponent implements OnInit {
 
-  constructor(private service: PedidosService) { }
+  constructor(private service: UpedidosPendentesService) { }
+
+
 
   ngOnInit(){
-    this.service.todas().subscribe((pedidos: Pedidos[]) => {
-      console.log(pedidos);
+    this.service.verUsuarioPedidosPendentes().subscribe((upedidosPendentes: UpedidosPendentes[]) => {
+      console.log(upedidosPendentes);
     })
   }
 

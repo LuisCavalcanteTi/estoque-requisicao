@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UpedidosFinalizados } from 'src/app/models/usuario/UpedidosFinalizados';
+import { UpedidosFinalizadosService } from 'src/app/service/usuario/UpedidosFinalizados.service';
 
 @Component({
   selector: 'app-usuario-pedidos-finalizados',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuarioPedidosFinalizadosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: UpedidosFinalizadosService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.service.verUsuarioPedidosFinalizados().subscribe((upedidosFinalizados: UpedidosFinalizados[]) => {
+      console.log(upedidosFinalizados);
+    })
   }
 
 }

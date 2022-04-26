@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EpedidosPendentes } from 'src/app/models/estoque/EpedidosPendentes';
+import { EpedidosPendentesService } from 'src/app/service/estoque/EpedidosPendentes.service';
 
 @Component({
   selector: 'app-estoque-pedidos-pendentes',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EstoquePedidosPendentesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: EpedidosPendentesService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.service.verEstoquePedidosPendentes().subscribe((epedidosPendentes: EpedidosPendentes[]) => {
+      console.log(epedidosPendentes);
+    })
   }
-
 }

@@ -14,7 +14,7 @@
        <br><br>
         <a href="/entrar" class="w3-bar-item w3-button" >Voltar</a>
        <br>
-     <a href="/sair" class="w3-bar-item w3-button" >Sair</a>
+     <a href="/login" class="w3-bar-item w3-button" >Sair</a>
 
 
     </div>
@@ -40,7 +40,7 @@
     <div class="w3-container w3-xlarge " style="margin-top:83px"></div>
 
     <div class="w3-row-padding w3-padding-16 w3-center w3-animate-zoom">
-      <div class="w3-third w3-card  w3-padding-16 w3-margin-bottom" th:each="pedido : ${pedidos}">
+      <div class="w3-third w3-card  w3-padding-16 w3-margin-bottom" *ngFor="let usuarioPedidosPendente">
 
         <h3 class=w3-text-red>Número do Pedido:</h3>
         <h2 th:text="${pedido.id}"></h2>

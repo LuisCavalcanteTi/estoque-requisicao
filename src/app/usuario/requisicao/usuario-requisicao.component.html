@@ -13,10 +13,10 @@
       <a href="usuario/PedidosPendentes" class="w3-bar-item w3-button">Pedidos Pendentes</a>
       <a href="usuario/PedidosFinalizados" class="w3-bar-item w3-button">Pedidos Finalizado</a>
 
-       <br><br>
-        <a href="/entrar" class="w3-bar-item w3-button" >Voltar</a>
-       <br>
-     <a href="/sair" class="w3-bar-item w3-button" >Sair</a>
+      <br><br>
+      <a href="/entrar" class="w3-bar-item w3-button">Voltar</a>
+      <br>
+      <a href="/sair" class="w3-bar-item w3-button">Sair</a>
 
 
     </div>
@@ -38,43 +38,21 @@
 
 
 
-  <article class="w3-main w3-animate-zoom" id="verr" style="margin-top: 100px">
-
-
-
-    <img src="/img/usuario.png" height="150" alt="imagem da logo Artesanart">
-
+  <article class="w3-animate-zoom w3-container "  id="verr" style="margin-top: 150px">
 
 
     <form th:object="${requisicaoNovoPedido}" class="w3-container w3-card-4 " action="cadastro" method="POST">
 
 
-
+     <p> <label for="codigoProduto" class="w3-text-blue"><b>Nome ou Código do Produto:</b></label></p>
       <input class="w3-input w3-border" list="pesquisarCodigo" name="codigoProduto" />
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class="w3-panel w3-yellow w3-text-red" th:errors="*{descricao}">
-        Erros do nome do produto</div>
       <p>
-        <label for="quantidade" class="w3-text-blue"><b>Quantidade</b></label>
+        <label for="quantidade" class="w3-text-blue"><b>Quantidade:</b></label>
         <input th:field="*{quantidade}" class="w3-input w3-border" type="text">
       </p>
-      <div class="w3-panel w3-yellow w3-text-red" th:errors="*{quantidade}">
-        Erros do nome do produto</div>
-
       <p>
         <label for="medida" class="w3-text-blue"><b>Unidade de
-            Medida</b></label>
+            Medida:</b></label>
       </p>
       <p>
         <select class="w3-select" name="medida">
@@ -87,8 +65,7 @@
         </select>
       </p>
 
-      <div class="w3-panel w3-yellow w3-text-red" th:errors="*{medida}">
-        Erros do nome do produto</div>
+
       <p>
         <p>
           <button type="submit" class="w3-btn w3-blue">Confirmar</button>

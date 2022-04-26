@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EpedidosImpressos } from 'src/app/models/estoque/EpedidosImpressos';
+import { EpedidosImpressosService } from 'src/app/service/estoque/EpedidosImpressos.service';
 
 @Component({
   selector: 'app-estoque-pedidos-impressos',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EstoquePedidosImpressosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: EpedidosImpressosService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.service.verEstoquePedidosImpressos().subscribe((epedidosImpressos: EpedidosImpressos[]) => {
+      console.log(epedidosImpressos);
+    })
   }
 
 }
