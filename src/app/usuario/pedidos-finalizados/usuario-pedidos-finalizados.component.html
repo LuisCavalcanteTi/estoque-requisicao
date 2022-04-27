@@ -48,28 +48,28 @@
 
 
     <div class="w3-row-padding w3-padding-64  " >
-      <div class="w3-half  w3-margin-bottom w3-animate-zoom w3-padding" style="border: 0.5px solid black;" th:each="pedido : ${pedidos}">
+      <div class="w3-half  w3-margin-bottom w3-animate-zoom w3-padding" style="border: 0.5px solid black;" *ngFor="let pedidoFinalizado of pedidosFinalizados">
 
 
 
           <div class="w3-half ">
 
         <h4 class=w3-text-red>Número do Pedido:</h4>
-        <p th:text="${pedido.id}"></p>
+        <p > {{ pedidoFinalizado.id}} </p>
 
         <h4 class=w3-text-red>Código Produto:</h4>
-        <p th:text="${pedido.codigoProduto}"></p>
+        <p >{{pedidoFinalizado.codigoProduto}}</p>
 
 
         <h4 class=w3-text-red>Descrição:</h4>
-        <p th:text="${pedido.descricao}"></p>
+        <p > {{ pedidoFinalizado.descricao }} </p>
 
 
                <h4 class=w3-text-red>Quantidade:</h4>
-        <p th:text="${pedido.quantidade}"></p>
+        <p > {{pedidoFinalizado.quantidade}} </p>
 
            <h4 class=w3-text-red>Quantidade Entregue:</h4>
-        <p th:text="${pedido.quantidade}"></p>
+        <p > {{pedidoFinalizado.quantidade}}</p>
 
       </div>
 
@@ -78,17 +78,17 @@
 
 
         <h4 class=w3-text-red>Data Hora Requição:</h4>
-        <p th:text="${pedido.horaRequisicao}"></p>
+        <p> {{pedidoFinalizado.horaRequisicao}} </p>
 
          <h4 class=w3-text-red>Data Hora Impresso:</h4>
-         <p th:text="${pedido.horaImpresso}"></p>
+         <p > {{pedidoFinalizado.horaImpresso}} </p>
 
 
         <h4 class=w3-text-red>Data Hora Finalizado:</h4>
-         <p th:text="${pedido.horaFinalizacao}"></p>
+         <p > {{pedidoFinalizado.horaFinalizacao}}</p>
 
          <h4 class=w3-text-red>Nome Estoque:</h4>
-         <p th:text="${pedido.nomeDoFinalizante}"></p>
+         <p> {{pedidoFinalizado.nomeDoFinalizante}} </p>
 
 
 

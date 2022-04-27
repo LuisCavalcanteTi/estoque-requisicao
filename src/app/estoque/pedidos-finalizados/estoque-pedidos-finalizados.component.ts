@@ -8,12 +8,12 @@ import { EpedidosFinalizadosService } from 'src/app/service/estoque/EpedidosFina
   styleUrls: ['./estoque-pedidos-finalizados.component.scss']
 })
 export class EstoquePedidosFinalizadosComponent implements OnInit {
-
+  pedidosFinalizados: any;
   constructor(private service: EpedidosFinalizadosService) { }
 
   ngOnInit(){
     this.service.verEstoquePedidosFinalizados().subscribe((epedidosFinalizados: EpedidosFinalizados[]) => {
-      console.log(epedidosFinalizados);
+       this.pedidosFinalizados = epedidosFinalizados;
     })
   }
 

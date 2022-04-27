@@ -62,16 +62,16 @@
         </tr>
 
 
-        <tr th:each="pedido : ${pedidos}" class="w3-hover-green   ">
+        <tr *ngFor="let pedidoPendente of pedidosPendentes" class="w3-hover-green   ">
 
-          <td th:text="${pedido.id}"></td>
-          <td th:text="${pedido.codigoProduto}"></td>
-          <td th:text="${pedido.descricao}"></td>
-          <td th:text="${pedido.quantidade}"></td>
-          <td th:text="${pedido.horaRequisicao}"></td>
+          <td> {{ pedidoPendente.id}} </td>
+          <td> {{ pedidoPendente.codigoProduto }}</td>
+          <td> {{ pedidoPendente.descricao }}</td>
+          <td> {{ pedidoPendente.quantidade }}</td>
+          <td> {{ pedidoPendente.horaRequisicao }} </td>
           <td>PENDENTE</td>
-          <td th:text="${pedido.setorDoRequisitante}"></td>
-          <td th:text="${pedido.nomeDoRequisitante}"></td>
+          <td> {{ pedidoPendente.setorDoRequisitante }}</td>
+          <td> {{ pedidoPendente.nomeDoRequisitante}} </td>
 
 
         </tr>

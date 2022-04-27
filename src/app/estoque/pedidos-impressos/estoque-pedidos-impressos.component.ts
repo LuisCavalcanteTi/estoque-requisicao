@@ -9,11 +9,12 @@ import { EpedidosImpressosService } from 'src/app/service/estoque/EpedidosImpres
 })
 export class EstoquePedidosImpressosComponent implements OnInit {
 
+  pedidosImpressos: any;
   constructor(private service: EpedidosImpressosService) { }
 
   ngOnInit(){
     this.service.verEstoquePedidosImpressos().subscribe((epedidosImpressos: EpedidosImpressos[]) => {
-      console.log(epedidosImpressos);
+      this.pedidosImpressos = epedidosImpressos;
     })
   }
 

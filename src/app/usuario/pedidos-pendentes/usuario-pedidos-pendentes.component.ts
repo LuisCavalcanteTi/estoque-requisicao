@@ -10,13 +10,15 @@ import { UpedidosPendentesService } from 'src/app/service/usuario/UpedidosPenden
 })
 export class UsuarioPedidosPendentesComponent implements OnInit {
 
+  pedidosPendentes: any;
   constructor(private service: UpedidosPendentesService) { }
 
 
 
   ngOnInit(){
     this.service.verUsuarioPedidosPendentes().subscribe((upedidosPendentes: UpedidosPendentes[]) => {
-      console.log(upedidosPendentes);
+      this.pedidosPendentes = upedidosPendentes;
+
     })
   }
 

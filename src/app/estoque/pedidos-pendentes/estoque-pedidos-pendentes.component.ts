@@ -9,11 +9,12 @@ import { EpedidosPendentesService } from 'src/app/service/estoque/EpedidosPenden
 })
 export class EstoquePedidosPendentesComponent implements OnInit {
 
+  pedidosPendentes: any;
   constructor(private service: EpedidosPendentesService) { }
 
   ngOnInit(){
     this.service.verEstoquePedidosPendentes().subscribe((epedidosPendentes: EpedidosPendentes[]) => {
-      console.log(epedidosPendentes);
+      this.pedidosPendentes = epedidosPendentes;
     })
   }
 }
