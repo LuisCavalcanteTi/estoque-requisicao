@@ -50,9 +50,9 @@
   </div>
 
 
-      <form *ngFor="let pedidoImpresso of pedidosImpressos" class="w3-container w3-card-4 w3-animate-zoom" action="/estoque/cadastro" method="POST" >
+      <form *ngFor="let pedidoImpresso of pedidosImpressos" class="w3-container "  action="/estoque/cadastro" method="POST" >
 
-
+        <div class="w3-container w3-card-4 w3-animate-zoom w3-margin-top " style="width:90%;">
 
 
         <div class="w3-third " >
@@ -66,11 +66,11 @@
 
 
           <h3>Código do Produto:</h3>
-          <p> {{pedidoImpresso.codigoProduto}}</p>
+          <p> {{ pedidoImpresso.codigoProduto }}</p>
           <input th:value="${pedido.codigoProduto}" class="w3-hide" name="codigoProduto" type="text">
 
           <h3>Descrição do Produto:</h3>
-          <p> {{pedidoImpresso.descricao}}</p>
+          <p> {{ pedidoImpresso.descricao }}</p>
 
           <input th:value="${pedido.descricao}" class="w3-hide" name="descricao" type="text">
 
@@ -136,6 +136,8 @@
           <button type="submit"
             class="w3-btn w3-red w3-hover-green w3-round-tiny"
             style="width: 100%">Confirmar</button>
+
+          </div>
 
       </form>
 

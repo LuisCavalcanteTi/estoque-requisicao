@@ -41,14 +41,14 @@
   <article class="w3-animate-zoom w3-container " id="verr" style="margin-top: 150px">
 
 
-    <form class="w3-container w3-card-4 " action="cadastro" method="POST">
+    <form class="w3-container w3-card-4 "  method="POST">
 
 
       <p> <label for="codigoProduto" class="w3-text-blue"><b>Código do Produto:</b></label></p>
-      <input class="w3-input w3-border" list="pesquisarCodigo" name="codigoProduto" />
+      <input class="w3-input w3-border" list="pesquisarCodigo"  name="codigoProduto"  />
       <p>
         <p> <label for="codigoProduto" class="w3-text-blue"><b>Descrição:</b></label></p>
-        <input class="w3-input w3-border" list="pesquisarCodigo" name="descricao" />
+        <input class="w3-input w3-border" list="pesquisarCodigo" name="descricao"  />
         <p>
 
 
@@ -60,7 +60,7 @@
               Medida:</b></label>
         </p>
         <p>
-          <select class="w3-select" name="medida">
+          <select class="w3-select" name="medida" >
             <option value="" disabled selected>Escolha a unidade de
               medida</option>
             <option value="Unidade">Unidade</option>
@@ -73,7 +73,7 @@
 
         <p>
           <p>
-            <button type="submit" class="w3-btn w3-blue">Confirmar</button>
+            <button   (click)="salvarRequisicao(formRequisicao)" class="w3-btn w3-blue">Confirmar</button>
           </p>
     </form>
 

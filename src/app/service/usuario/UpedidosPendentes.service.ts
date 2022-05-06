@@ -19,6 +19,7 @@ export class UpedidosPendentesService {
    }
 
 
+
    verUsuarioPedidosPendentes(): Observable<UpedidosPendentes[]>{
      return this.httpClient.get<UpedidosPendentes[]>(this.url);
    }

@@ -17,4 +17,5 @@ export class EstoquePedidosPendentesComponent implements OnInit {
       this.pedidosPendentes = epedidosPendentes;
     })
   }
+
 }

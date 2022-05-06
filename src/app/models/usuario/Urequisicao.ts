@@ -1,8 +1,8 @@
 export interface Urequisicao {
 
-  codigoProduto: string ;
-	descricao: string ;
-	quantidade: string ;
-	medida: string ;
+  codigoProduto?: string ;
+	descricao?: string ;
+	quantidade?: string ;
+	medida?: string ;
 
 }

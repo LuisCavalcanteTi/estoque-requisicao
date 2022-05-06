@@ -9,6 +9,7 @@ import { UsuarioPedidosFinalizadosComponent } from './usuario/pedidos-finalizado
 import { UsuarioPedidosPendentesComponent } from './usuario/pedidos-pendentes/usuario-pedidos-pendentes.component';
 import { UsuarioRequisicaoComponent } from './usuario/requisicao/usuario-requisicao.component';
 
+
 const routes: Routes = [
 { path: 'login', component: LoginComponent},
 { path: 'entrar', component: EntrarComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
 { path: 'estoque/PedidosPendentes', component: EstoquePedidosPendentesComponent},
 { path: 'estoque/PedidosImpressos', component: EstoquePedidosImpressosComponent},
 { path: 'estoque/PedidosFinalizados', component: EstoquePedidosFinalizadosComponent},
+
 
 
 
