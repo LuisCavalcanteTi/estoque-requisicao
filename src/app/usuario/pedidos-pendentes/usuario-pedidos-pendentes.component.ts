@@ -18,6 +18,7 @@ export class UsuarioPedidosPendentesComponent implements OnInit {
   ngOnInit(){
     this.service.verUsuarioPedidosPendentes().subscribe((upedidosPendentes: UpedidosPendentes[]) => {
       this.pedidosPendentes = upedidosPendentes;
+      console.log(this.pedidosPendentes);
 
     })
   }

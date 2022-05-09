@@ -1,4 +1,4 @@
-<body onload="onLoad()" class="w3-content " style="max-width: 1920px">
+<body  class="w3-content " style="max-width: 1920px">
 
   <nav class="  w3-collapse w3-top w3-red w3-border" style="z-index: 3; width: 350px; display: none;" id="mySidebar">
     <div class="w3-container w3-card  w3-display-container w3-padding-16 ">
@@ -41,26 +41,26 @@
   <article class="w3-animate-zoom w3-container " id="verr" style="margin-top: 150px">
 
 
-    <form class="w3-container w3-card-4 "  method="POST">
+    <form class="w3-container w3-card-4 "  (ngSubmit)="salvarRequisicao(formRequisicao)" method="POST">
 
 
       <p> <label for="codigoProduto" class="w3-text-blue"><b>Código do Produto:</b></label></p>
-      <input class="w3-input w3-border" list="pesquisarCodigo"  name="codigoProduto"  />
+      <input class="w3-input w3-border" list="pesquisarCodigo" [(ngModel)]="codigoProduto"  name="codigoProduto"  />
       <p>
         <p> <label for="codigoProduto" class="w3-text-blue"><b>Descrição:</b></label></p>
-        <input class="w3-input w3-border" list="pesquisarCodigo" name="descricao"  />
+        <input class="w3-input w3-border" list="pesquisarCodigo" [(ngModel)]="descricao"  name="descricao"  />
         <p>
 
 
           <label for="quantidade" class="w3-text-blue"><b>Quantidade:</b></label>
-          <input class="w3-input w3-border" name="quantidade" type="text">
+          <input class="w3-input w3-border" [(ngModel)]="quantidade"  name="quantidade" type="text">
         </p>
         <p>
           <label for="medida" class="w3-text-blue"><b>Unidade de
               Medida:</b></label>
         </p>
         <p>
-          <select class="w3-select" name="medida" >
+          <select class="w3-select" [(ngModel)]="medida"  name="medida" >
             <option value="" disabled selected>Escolha a unidade de
               medida</option>
             <option value="Unidade">Unidade</option>
@@ -73,7 +73,7 @@
 
         <p>
           <p>
-            <button   (click)="salvarRequisicao(formRequisicao)" class="w3-btn w3-blue">Confirmar</button>
+            <button  type="submit" class="w3-btn w3-blue">Confirmar</button>
           </p>
     </form>
 

@@ -16,7 +16,7 @@ export class UrequisicaoService {
   constructor(private httpClient: HttpClient) {  }
 
   salvarRequisicao(urequisicao: Urequisicao): Observable<Urequisicao> {
-    return this.httpClient.post<Urequisicao>(this.url, urequisicao);
+        return this.httpClient.post<Urequisicao>(this.url, urequisicao);
   }
 
 

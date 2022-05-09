@@ -10,28 +10,43 @@ import { UrequisicaoService } from 'src/app/service/usuario/Urequisicao.service'
 
 
 export class UsuarioRequisicaoComponent implements OnInit {
-  formRequisicao!: Urequisicao;
-
-
-  constructor(private urequisicaoService: UrequisicaoService) {}
 
 
 
+  codigoProduto!: string;
+  descricao !: string;
+  quantidade !: string;
+  medida !: string;
 
 
-  ngOnInit() {
+
+  constructor(private urequisicaoService: UrequisicaoService) {  }
+
+    formRequisicao: Urequisicao = {
+    codigoProduto: this.codigoProduto ,
+    descricao: this.descricao,
+    quantidade: this.codigoProduto,
+    medida: this.medida
+
+  };
 
 
 
+
+  ngOnInit(): void {
 
   }
 
 
 
-  salvarRequisicao(urequisicao: Urequisicao){
+  salvarRequisicao(urequisicao:Urequisicao){
 
     console.log(this.formRequisicao);
 
+    console.log(this.codigoProduto);
+    console.log(this.descricao);
+    console.log(this.quantidade);
+    console.log(this.medida);
 
     this.urequisicaoService.salvarRequisicao(this.formRequisicao).subscribe(() =>
     {
